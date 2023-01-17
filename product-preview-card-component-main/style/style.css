@@ -101,7 +101,7 @@ img {
 }
 
 @media (max-width: 700px) {
-    .container {
+    .card-product {
         grid-template-columns: 350px;
     }
     .card-info {
