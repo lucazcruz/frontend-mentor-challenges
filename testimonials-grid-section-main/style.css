@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500;
+  font-style: normal;
+  src: local('Barlow Semi Condensed'), url('./assets/font/barlowsemicondensed-medium-webfont.woff') format('woff'),
+       url('./assets/font/barlowsemicondensed-medium-webfont.woff2') format('woff2');
+  font-display: swap;
+  
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: local('Barlow Semi Condensed'), url('./assets/font/barlowsemicondensed-semibold-webfont.woff') format('woff'),
+       url('./assets/font/barlowsemicondensed-semibold-webfont.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-0: #ffffff;
+  --color-1: #ecf2f8;
+  --color-2: #7541c8;
+  --color-3: #48556a;
+  --color-4: #19212e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--color-1);
+  font-family: 'Barlow Semi Condensed';
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: clamp(35.5rem , 94vw , 112rem);
+  display: grid;
+  padding: 3.2rem 0;
+  gap: 2.4rem;
+}
+
+.card {
+  border-radius: .8rem;
+  padding: 3.2rem 3.2rem 4.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+  color: var(--color-0);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.card-header img {
+  border-radius: 50%;
+  width: 3.2rem;
+}
+
+.card-header h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  font-style: normal;
+
+  opacity: 1;
+}
+
+.card-header span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.3rem;
+  opacity: 0.8;
+}
+
+.card h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  font-style: normal;
+  
+  margin: 2rem 0;
+}
+
+.card p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  opacity: 0.8;
+}
+
+.card-1 {
+  background-color: var(--color-2);
+  position: relative;
+}
+
+.card-1 h3 {
+  position: relative;
+  z-index: 2;
+}
+
+.card-1::after {
+  content: '';
+  display: block;
+  background: url('./assets/images/bg-pattern-quotation.svg') no-repeat center;
+  height: 10.4rem;
+  width: 10.4rem;
+  position: absolute;
+  top: 0;
+  right: 3.8rem;
+  z-index: 1;
+}
+
+.card-2 {
+  background-color: var(--color-3);
+}
+
+.card-3 {
+  background-color: var(--color-0);
+  color: var(--color-3);
+}
+
+.card-4 {
+  background-color: var(--color-4);
+}
+
+.card-5 {
+  background-color: var(--color-0);
+  color: var(--color-3);
+}
+
+.attribution { position: fixed; bottom: 15px; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 800px) {
+  main {
+    padding: 3.2rem 0;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "A A B E"
+    "C D D E";
+  }
+  
+  .card-1 { grid-area: A; }  
+  .card-2 { grid-area: B; }  
+  .card-3 { grid-area: C; }  
+  .card-4 { grid-area: D; }  
+  .card-5 { grid-area: E; }
+}
