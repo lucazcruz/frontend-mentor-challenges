@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div id="app">
+    <header>
+      <div class="header-left">
+        <img src="./assets/icon-menu.svg" alt="menu-icon" class="menu-btn">
+        <img src="./assets/logo.svg" alt="Logo - sneakers">
+
+        <div class="overlayer"></div>
+        <nav class="header-menu">
+          <img src="assets/icon-close.svg" alt="icon-close" class="close-btn">
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Woman</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="cart-wrapper">
+          <div class="amount-items">0</div>
+          <img src="./assets/icon-cart.svg" alt="cart-icon" class="cart-btn">
+
+          <div class="cart-modal ">
+            <h3>Cart</h3>
+            <div class="cart-content">
+
+            </div>
+            <button class="checkout-btn">Checkout</button>
+          </div>
+
+        </div>
+        <img src="./assets/image-avatar.png" alt="avatar-image" width="42" height="42">
+      </div>
+    </header>
+    <main>
+      <div class="product">
+        <div class="navButtons">
+          <img src="./assets/icon-previous.svg" alt="previous button" class="previous-button">
+          <img src="./assets/icon-next.svg" alt="next button" class="next-button">
+        </div>
+        <img src="assets/image-product-1.jpg" alt="tenis" class="image-main">
+        <div class="galeria">
+          <img src="./assets/image-product-1.jpg" alt="" width="90" height="90">
+          <img src="./assets/image-product-2.jpg" alt="" width="90" height="90">
+          <img src="./assets/image-product-3.jpg" alt="" width="90" height="90">
+          <img src="./assets/image-product-4.jpg" alt="" width="90" height="90">
+        </div>
+      </div>
+
+      <div class="content">
+        <span>Sneaker Company</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+
+        <div class="price">
+          <h2>$125.00 <span class="discount-percentage">50%</span></h2>
+          <span class="discount">$250.00</span>
+        </div>
+
+        <div class="amount-btn">
+          <img src="./assets/icon-minus.svg" alt="icon-minus" class="minus">
+          <span class="amount">0</span>
+          <img src="./assets/icon-plus.svg" alt="icon-plus" class="plus">
+        </div>
+
+        <button class="add-button">
+          <img src="./assets/icon-cart.svg" alt="icon-cart">
+          Add to cart
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

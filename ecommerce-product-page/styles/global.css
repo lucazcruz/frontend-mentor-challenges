@@ -1,0 +1,80 @@
+:root {
+  --color-6: #000000;
+  --color-5: #1d2026;
+  --color-4: #69707d;
+  --color-3: #68707d;
+  --color-2: #b6bcc8;
+  --color-1: #ffffff;
+
+  --color-7: #ff7e1b;
+  --color-8: #ff7d1a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  cursor: pointer;
+}
+
+.image-main {
+  cursor: initial;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+button {
+  background-color: var(--color-8);
+  color: var(--color-1);
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button:hover {
+  filter: brightness(.8);
+}
+
+#app {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+  }
+
+  img:hover {
+    filter: brightness(.8);
+    cursor: pointer;
+  }
+}
