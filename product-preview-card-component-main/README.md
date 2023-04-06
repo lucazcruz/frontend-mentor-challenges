@@ -10,7 +10,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-- Live Site URL: [Product preview card component](https://lucazcruz.github.io/frontend-mentor-challenges/product-preview-card-component-main/)
+- Live Site URL: [Product preview card component](https://lucazcruz.github.io/frontend-mentor-challenges/product-preview-card-component/)
 
 
 ### Built with
