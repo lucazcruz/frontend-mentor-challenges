@@ -1,0 +1,104 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  --light-red: hsl(0, 100%, 67%);
+  --purple: hsl(259, 100%, 65%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--off-white);
+}
+
+body * {
+  font-family: 'Poppins', sans-serif;
+  line-height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background: #fff;
+  padding: 54px;
+  min-width: 800px;
+
+  border-radius: 20px 20px 200px 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 22px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--light-grey);
+
+  position: relative;
+}
+
+.input-container label {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+
+  color: var(--smokey-grey);
+}
+
+.input-container input {
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  max-width: 152px;
+  padding: 12px 22px;
+  font-size: 32px;
+
+}
+
+.input-container input:focus {
+  outline: 1px solid var(--purple);
+}
+
+.arrow-submit {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  padding: 24px;
+  background: var(--purple);
+  border-radius: 50%;
+}
+
+.arrow-submit:hover {
+  filter: brightness(.9);
+  cursor: pointer;
+}
+
+.content-container {
+  padding-top: 58px;
+}
+
+.content-container p {
+  font-size: 100px;
+  font-style: italic;
+  font-weight: 800;
+  margin-bottom: 8px;
+
+  cursor: default;
+}
+
+.content-container span {
+  color: var(--purple);
+}
