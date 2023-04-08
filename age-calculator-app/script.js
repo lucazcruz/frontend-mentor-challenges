@@ -1,6 +1,6 @@
 import Time from "./scripts/time.js";
 
-const arrowSubmit = document.querySelector(".arrow-submit");
+const arrowSubmit = document.querySelector(".submit");
 
 const inputYear = document.querySelector("#year");
 const inputMonth = document.querySelector("#month");

@@ -14,6 +14,11 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  height: 100%;
+}
+
 body {
   background: var(--off-white);
 }
@@ -34,71 +39,88 @@ body * {
 
 main {
   background: #fff;
-  padding: 54px;
-  min-width: 800px;
-
-  border-radius: 20px 20px 200px 20px;
+  min-width: clamp(325px, 60vw, 800px);
+  border-radius: 10px 10px 100px 10px;
+  padding: 52px clamp(22px, 5vw, 52px);
 }
 
 .input-container {
   display: flex;
-  gap: 22px;
-  padding-bottom: 48px;
+  gap: 14px;
+  padding-bottom: 64px;
   border-bottom: 1px solid var(--light-grey);
-
   position: relative;
 }
 
-.input-container label {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
+.input-container div{
+  display: flex;
+  flex-direction: column;
+}
 
+.input-container label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   color: var(--smokey-grey);
+  margin-bottom: 8px;
 }
 
 .input-container input {
+  font-size: clamp(14px, 2vw, 22px);
+  padding: 14px;
   border: 1px solid var(--light-grey);
-  border-radius: 4px;
-  max-width: 152px;
-  padding: 12px 22px;
-  font-size: 32px;
-
+  border-radius: 8px;
+  width: clamp(84px, 10vw, 152px);
 }
 
 .input-container input:focus {
   outline: 1px solid var(--purple);
 }
 
-.arrow-submit {
-  position: absolute;
-  bottom: -50px;
-  right: 0;
-  padding: 24px;
-  background: var(--purple);
+.submit {
+  height: clamp(66px, 7vw, 94px);
+  padding: 20px;
   border-radius: 50%;
-}
-
-.arrow-submit:hover {
-  filter: brightness(.9);
+  background: var(--purple);
   cursor: pointer;
+  border: none;
+
+  position: absolute;
+  bottom: -33px;
+  right: 50%;
+  margin-right: -33px;
 }
+.submit:hover { background: var(--off-black); }
+
 
 .content-container {
-  padding-top: 58px;
+  padding-top: 64px;
 }
 
 .content-container p {
-  font-size: 100px;
-  font-style: italic;
+  font-size: clamp(60px, 5vw, 100px);
   font-weight: 800;
-  margin-bottom: 8px;
-
+  font-style: italic;
   cursor: default;
 }
 
 .content-container span {
   color: var(--purple);
+}
+
+@media (min-width: 768px) {
+  main {
+    border-radius: 20px 20px clamp(100px, 10vw, 200px) 20px;
+  }
+
+  .input-container {
+    padding-bottom: 42px;
+  }
+
+  .submit {
+    right: 0px;
+    margin: 0;
+    transition: right 1s;
+  }
+  
 }
