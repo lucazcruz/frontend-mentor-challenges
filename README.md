@@ -2,7 +2,11 @@
 
 ### E-commerce product page
 ![](./ecommerce-product-page/design/screenshot.png)
-- [Product preview card component](https://lucazcruz.github.io/frontend-mentor-challenges/ecommerce-product-page/)
+- [E-commerce product page](https://lucazcruz.github.io/frontend-mentor-challenges/ecommerce-product-page/)
+
+### Age calculator app
+![](./age-calculator-app/design/screenshot.png)
+- [Age calculator app](https://lucazcruz.github.io/frontend-mentor-challenges/age-calculator-app/)
 
 ### Product preview card component
 ![](./product-preview-card-component/design/screenshot.png)
