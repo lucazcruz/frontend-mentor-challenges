@@ -1,32 +1,25 @@
 import Time from "./scripts/time.js";
+import Util from "./scripts/util.js";
 
-const arrowSubmit = document.querySelector(".submit");
+const form = document.querySelector("form");
 
-const inputYear = document.querySelector("#year");
-const inputMonth = document.querySelector("#month");
-const inputDay = document.querySelector("#day");
+const yearElement = document.querySelector(".year");
+const monthElement = document.querySelector(".month");
+const dayElement = document.querySelector(".day");
 
-const year = document.querySelector(".year");
-const month = document.querySelector(".month");
-const day = document.querySelector(".day");
+function handleSubmit(e) {
+  e.preventDefault();
 
-function formatedDate() {
-  const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
-  
-  const year = inputYear.value;
-  const month = inputMonth.value -1 ;
-  const day = inputDay.value;
+  const formData = new FormData(e.target);
+  const formProps = Object.fromEntries(formData);
 
-  return `${year} ${months[month]} ${day}`;
+  const validator = Util.validate(formProps);
+  if (!validator) return;
+
+  const dateObject = new Time(formProps).obj;
+  yearElement.innerText = `${dateObject.year} `;
+  monthElement.innerText = `${dateObject.month} `;
+  dayElement.innerText = `${dateObject.day} `;
 }
 
-function submit() {
-  const date = formatedDate();
-
-  const time = new Time(date);
-  year.innerText = `${time.total.year} `;
-  month.innerText = `${time.total.month} `;
-  day.innerText = `${time.total.day} `;
-}
-
-arrowSubmit.addEventListener("click", submit);
+form.addEventListener("submit", handleSubmit);

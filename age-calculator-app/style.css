@@ -108,6 +108,16 @@ main {
   color: var(--purple);
 }
 
+.error label { color: red; }
+.error input { border-color: red; }
+span.error {
+  color: red;
+  font-size: 10px;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 8px;
+}
+
 @media (min-width: 768px) {
   main {
     border-radius: 20px 20px clamp(100px, 10vw, 200px) 20px;

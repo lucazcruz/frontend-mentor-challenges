@@ -1,10 +1,17 @@
 export default class Time {
-  constructor(date) {
-    this.date = date;
+  constructor(formProps) {
+    this.formProps = formProps;
+  }
+
+  formatedDate({day, month, year}) {
+    const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+  
+    return `${year} ${months[month -1]} ${day}`;
   }
 
   get pastDate() {
-    return new Date(this.date);
+    const formatedDate = this.formatedDate(this.formProps);
+    return new Date(formatedDate);
   }
 
   get todayDate() {
@@ -12,25 +19,37 @@ export default class Time {
   }
 
   get year() {
-    return Math.floor((this.todayDate - this.pastDate) / (1000 * 60 * 60 * 24 * 365));
+    return Math.floor(this.diff / (1000 * 60 * 60 * 24 * 365));
   }
 
   get month() {
-    return Math.floor((this.todayDate - this.pastDate) / (1000 * 60 * 60 * 24 * 30.417));
+    return (Math.floor(this.diff / (1000 * 60 * 60 * 24 * 29))) % 12;
   }
 
   get day() {
-    return Math.floor((this.todayDate - this.pastDate) / (1000 * 60 * 60 * 24));
+    const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let day = Math.floor(this.diff / (1000 * 60 * 60 * 24));
+
+    let month = this.formProps.month -1;
+
+    day++
+    while (day > 31) {
+      if (month > 11) month = 0;
+      day -= monthDays[month];
+      month++;
+    }
+    day--
+
+    return day;
   }
 
-  get total() {
-    const year = this.year;
-    const month = this.month % 12;
-    const day = Math.floor(this.day % 30.417);
+  get obj() {
+    this.diff = this.todayDate - this.pastDate;
+
     return {
-      year,
-      month,
-      day
+      year: this.year,
+      month: this.month,
+      day: this.day
     }
   }
 }
