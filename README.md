@@ -8,6 +8,10 @@
 ![](./age-calculator-app/design/screenshot.png)
 - [Age calculator app](https://lucazcruz.github.io/frontend-mentor-challenges/age-calculator-app/)
 
+### Article preview component
+![](./article-preview-component/design/screenshot.png)
+- [Article preview component](https://lucazcruz.github.io/frontend-mentor-challenges/article-preview-component/)
+
 ### Product preview card component
 ![](./product-preview-card-component/design/screenshot.png)
 - [Product preview card component](https://lucazcruz.github.io/frontend-mentor-challenges/product-preview-card-component/)
